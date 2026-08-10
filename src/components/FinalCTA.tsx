@@ -12,7 +12,6 @@ export default function FinalCTA() {
       setStatus("err");
       return;
     }
-    // Waitlist capture: wire to backend / Formspree / Loops later
     setStatus("ok");
     setEmail("");
   };
@@ -31,14 +30,15 @@ export default function FinalCTA() {
       <div className="relative mx-auto max-w-3xl px-4 sm:px-6 text-center">
         <p className="section-label mb-3 justify-center">
           <span className="pulse-dot" />
-          Private beta
+          Private beta · 300 enhancements
         </p>
         <h2 id="cta-heading" className="section-title">
-          Your leagues deserve a full-time front office.
+          Draft tools rent you a week. Own the whole season.
         </h2>
         <p className="section-sub mt-4 mx-auto">
-          Join the private beta for SnapFantasy — multi-league fantasy football AI
-          that outlasts draft week. TestFlight when ready. Email waitlist now.
+          Join the private beta for SnapFantasy — multi-league fantasy football AI with
+          Sunday GM, portfolio heat, market intel, and a learning loop draft apps never
+          ship. TestFlight when ready.
         </p>
 
         <form
@@ -83,10 +83,14 @@ export default function FinalCTA() {
           <a href="#why-better" className="btn-secondary !text-sm">
             Compare to Draft Wizard
           </a>
-          <span className="text-xs text-[var(--text-dim)]">
-            Private · Local-first · OpenRouter-native
-          </span>
+          <a href="#features" className="btn-secondary !text-sm">
+            Full capability map
+          </a>
         </div>
+        <p className="mt-4 text-xs text-[var(--text-dim)]">
+          Private · Local-first · OpenRouter-native · FP = market · AI = judgment · your
+          leagues = moat
+        </p>
       </div>
     </section>
   );

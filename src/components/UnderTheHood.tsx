@@ -1,98 +1,16 @@
 "use client";
 
 import { useState } from "react";
-
-const groups = [
-  {
-    id: "draft-night",
-    label: "Draft night",
-    items: [
-      "Simultaneous multi-league draft rooms",
-      "Snake / linear clocks from slot + team count",
-      "Sleeper auto-sync + manual pick log",
-      "Snap Score dual-signal queue",
-      "Reach / steal radar",
-      "Strategy modes: Zero / Hero / Robust RB",
-      "Keeper awareness + auction ceilings",
-      "Voice draft Q&A",
-      "Offline draft pack + cached recs",
-      "Post-draft grade vs ADP / FP",
-    ],
-  },
-  {
-    id: "season-ai",
-    label: "Season AI",
-    items: [
-      "One-tap Optimize Lineup pipeline",
-      "Start/Sit confidence + floor/ceiling",
-      "Waiver wire + FAAB engine",
-      "Trade analyzer + package generator",
-      "Negotiation agent",
-      "Injury & news impact",
-      "Weather fades",
-      "Matchup smash / tough flags",
-      "Bye planner + schedule preview",
-      "Playoff odds",
-      "Free-form chat + voice",
-    ],
-  },
-  {
-    id: "portfolio",
-    label: "Portfolio",
-    items: [
-      "Cross-league exposure map",
-      "Anti-correlate suggestions",
-      "League importance weights",
-      "Sunday batch optimize all leagues",
-      "Silent partner digest",
-      "Shared stash / FAAB coordination",
-    ],
-  },
-  {
-    id: "host-import",
-    label: "Host import",
-    items: [
-      "Sleeper sync",
-      "Yahoo OAuth (official API)",
-      "Paste invite / URL / HTML → structured league",
-      "Optional Gmail fantasy scan",
-      "Settings-diff when rules change",
-    ],
-  },
-  {
-    id: "agents",
-    label: "Agents",
-    items: [
-      "Scout / Risk Officer / GM debate",
-      "Weekly script of the week",
-      "Post-week autopsy",
-      "Season thesis",
-      "Prove-it citations",
-      "Tool-using Sunday plan + spend cap",
-      "House rules + constitution injection",
-    ],
-  },
-  {
-    id: "learning",
-    label: "Learning",
-    items: [
-      "Decision log",
-      "Accuracy charts",
-      "Confidence calibration",
-      "Personal truth model from graded misses",
-      "Private notes in every AI call",
-      "Hallucination guards vs local DB / rankings",
-    ],
-  },
-];
+import { capabilityGroups } from "@/data/capabilities";
 
 export default function UnderTheHood() {
-  const [tab, setTab] = useState(groups[0].id);
+  const [tab, setTab] = useState(capabilityGroups[0].id);
   const [expanded, setExpanded] = useState(false);
-  const active = groups.find((g) => g.id === tab) ?? groups[0];
+  const active = capabilityGroups.find((g) => g.id === tab) ?? capabilityGroups[0];
 
   return (
     <section
+      id="features"
       className="relative py-20 sm:py-28 border-t border-[var(--border)]"
       aria-labelledby="hood-heading"
     >
@@ -100,30 +18,51 @@ export default function UnderTheHood() {
         <div className="max-w-2xl mb-10">
           <p className="section-label mb-3">
             <span className="h-1 w-1 rounded-full bg-[var(--accent)]" aria-hidden />
-            Feature depth
+            Capability map · 300 enhancements
           </p>
           <h2 id="hood-heading" className="section-title">
-            Under the hood — without the 100-bullet dump.
+            Under the hood — the stack Draft Wizard never ships.
           </h2>
           <p className="section-sub mt-4">
-            Capability map by pillar. Expand when you want the full inventory.
+            Gen1 win stack (1–50). Gen2 import & portfolio (51–100). Gen3 market,
+            agents, Draft 3.0, season domination, portfolio heat, hosts, learning,
+            formats & UX (101–300). Browse by pillar — expand for the full inventory.
           </p>
         </div>
 
-        {/* Tabs */}
+        <div className="mb-6 grid grid-cols-3 sm:grid-cols-3 gap-3 max-w-lg">
+          {[
+            { n: "50", l: "Gen1 win stack" },
+            { n: "50", l: "Gen2 portfolio" },
+            { n: "200", l: "Gen3 command" },
+          ].map((c) => (
+            <div
+              key={c.l}
+              className="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] px-3 py-3 text-center"
+            >
+              <div className="font-mono text-xl font-bold text-[var(--accent-bright)]">
+                {c.n}
+              </div>
+              <div className="text-[10px] sm:text-xs text-[var(--text-dim)] mt-0.5">
+                {c.l}
+              </div>
+            </div>
+          ))}
+        </div>
+
         <div
           className="flex flex-wrap gap-2 mb-6"
           role="tablist"
           aria-label="Capability pillars"
         >
-          {groups.map((g) => (
+          {capabilityGroups.map((g) => (
             <button
               key={g.id}
               type="button"
               role="tab"
               aria-selected={tab === g.id}
               onClick={() => setTab(g.id)}
-              className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors border ${
+              className={`rounded-full px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors border ${
                 tab === g.id
                   ? "bg-[var(--accent)] text-[#04120a] border-transparent"
                   : "border-[var(--border)] text-[var(--text-muted)] hover:border-[var(--border-strong)] hover:text-[var(--text)]"
@@ -134,21 +73,17 @@ export default function UnderTheHood() {
           ))}
         </div>
 
-        <div
-          className="card p-5 sm:p-6"
-          role="tabpanel"
-          aria-label={active.label}
-        >
-          <h3 className="text-base font-semibold text-[var(--text)] mb-4">
-            {active.label}
-          </h3>
+        <div className="card p-5 sm:p-6" role="tabpanel" aria-label={active.label}>
+          <div className="flex flex-wrap items-baseline justify-between gap-2 mb-4">
+            <h3 className="text-base font-semibold text-[var(--text)]">{active.label}</h3>
+            <span className="text-xs font-mono text-[var(--text-dim)]">
+              IDs {active.range}
+            </span>
+          </div>
           <ul className="grid gap-2 sm:grid-cols-2">
             {active.items.map((item) => (
-              <li
-                key={item}
-                className="flex gap-2 text-sm text-[var(--text-muted)]"
-              >
-                <span className="text-[var(--accent)] mt-0.5" aria-hidden>
+              <li key={item} className="flex gap-2 text-sm text-[var(--text-muted)]">
+                <span className="text-[var(--accent)] mt-0.5 shrink-0" aria-hidden>
                   ✓
                 </span>
                 {item}
@@ -157,7 +92,6 @@ export default function UnderTheHood() {
           </ul>
         </div>
 
-        {/* Full capability accordion */}
         <div className="mt-4">
           <button
             type="button"
@@ -165,16 +99,21 @@ export default function UnderTheHood() {
             aria-expanded={expanded}
             onClick={() => setExpanded((v) => !v)}
           >
-            {expanded ? "Hide full capability map" : "See full capability map"}
+            {expanded ? "Hide full capability map" : "See full capability map (all pillars)"}
           </button>
           <div className={`accordion-content ${expanded ? "open" : ""} mt-4`}>
             <div>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {groups.map((g) => (
+                {capabilityGroups.map((g) => (
                   <div key={g.id} className="card p-4">
-                    <h4 className="text-sm font-semibold text-[var(--accent)] mb-2">
-                      {g.label}
-                    </h4>
+                    <div className="flex items-baseline justify-between gap-2 mb-2">
+                      <h4 className="text-sm font-semibold text-[var(--accent)]">
+                        {g.label}
+                      </h4>
+                      <span className="text-[10px] font-mono text-[var(--text-dim)]">
+                        {g.range}
+                      </span>
+                    </div>
                     <ul className="space-y-1">
                       {g.items.map((item) => (
                         <li key={item} className="text-xs text-[var(--text-muted)]">
@@ -185,6 +124,9 @@ export default function UnderTheHood() {
                   </div>
                 ))}
               </div>
+              <p className="mt-4 text-xs text-[var(--text-dim)] text-center">
+                In-app: Tools → Diagnostics & coverage confirms Gen1 + Gen2 + Gen3 = 300.
+              </p>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import StatsBar from "@/components/StatsBar";
 import ProductMap from "@/components/ProductMap";
 import Comparison from "@/components/Comparison";
 import Playbook from "@/components/Playbook";
@@ -17,6 +18,7 @@ export default function Home() {
       <Nav />
       <main className="flex-1">
         <Hero />
+        <StatsBar />
         <ProductMap />
         <Comparison />
         <Playbook />

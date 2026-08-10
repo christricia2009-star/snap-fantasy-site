@@ -15,23 +15,25 @@ export default function Pricing() {
             Stop renting draft week. Own the season.
           </h2>
           <p className="section-sub mt-4">
-            No per-seat tax for league-mates who just want the free host. You pay for
-            intelligence — not for locking your friends into another subscription.
+            Draft tools sell seats. Hosts are free but dumb about your portfolio.
+            SnapFantasy is one private brain — 300 enhancements — with usage you
+            control, not N× premium subs for friends who just want the room.
           </p>
         </div>
 
         <div className="grid gap-4 lg:grid-cols-3">
-          <article className="card p-6 lg:col-span-1">
+          <article className="card p-6">
             <p className="text-xs font-semibold uppercase tracking-wider text-[var(--text-dim)]">
               The app
             </p>
             <h3 className="mt-2 text-xl font-bold text-[var(--text)]">Private / personal</h3>
             <p className="mt-3 text-sm text-[var(--text-muted)] leading-relaxed">
-              Not App Store mass product. Built for you + friends. Private beta access.
+              Not App Store mass product. Built for you + friends. Private beta.
+              Mock AI demos every feature offline without a key.
             </p>
           </article>
 
-          <article className="card p-6 border-[var(--accent)]/30 relative overflow-hidden lg:col-span-1">
+          <article className="card p-6 border-[var(--accent)]/30 relative overflow-hidden">
             <div
               className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[var(--accent)]/10 blur-2xl"
               aria-hidden
@@ -45,7 +47,7 @@ export default function Pricing() {
                 <span className="text-[var(--accent)]" aria-hidden>
                   →
                 </span>
-                OpenRouter tokens (budget caps in-app)
+                OpenRouter tokens (daily/weekly budget caps in-app)
               </li>
               <li className="flex gap-2">
                 <span className="text-[var(--accent)]" aria-hidden>
@@ -59,10 +61,16 @@ export default function Pricing() {
                 </span>
                 League-mates stay free on Sleeper / Yahoo / ESPN
               </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--accent)]" aria-hidden>
+                  →
+                </span>
+                Cheap + smart model split · spend-capped Sunday plans
+              </li>
             </ul>
           </article>
 
-          <article className="card p-6 lg:col-span-1">
+          <article className="card p-6">
             <p className="text-xs font-semibold uppercase tracking-wider text-[var(--text-dim)]">
               Compare to
             </p>
@@ -71,8 +79,8 @@ export default function Pricing() {
             </h3>
             <p className="mt-3 text-sm text-[var(--text-muted)] leading-relaxed">
               FantasyPros premium and Draft Wizard seats scale per serious manager.
-              SnapFantasy is one brain. One optional market key. Open models you
-              control.
+              ChatGPT Pro still doesn’t know your FAAB. SnapFantasy: one brain, optional
+              market key, models and personas you control.
             </p>
           </article>
         </div>
@@ -82,7 +90,10 @@ export default function Pricing() {
             Join private beta
           </a>
           <a href="#why-better" className="btn-secondary">
-            Re-read the comparison
+            Re-read why we win
+          </a>
+          <a href="#features" className="btn-secondary">
+            Browse 300 features
           </a>
         </div>
       </div>

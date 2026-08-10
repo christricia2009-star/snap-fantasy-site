@@ -1,19 +1,19 @@
 const items = [
   {
     title: "Local-first SwiftData",
-    body: "Your leagues live on device. Cloud is optional backup — not the product.",
+    body: "Your leagues live on device (SnapFantasy_v5). CloudKit schema ready — not required.",
   },
   {
     title: "Keys in Keychain",
-    body: "OpenRouter, FantasyPros, Yahoo, Gmail — stored where they belong.",
+    body: "OpenRouter, FantasyPros, Yahoo, Gmail — multi-host token vault. Biometric lock optional.",
   },
   {
     title: "No selling your league graph",
     body: "Private distribution. Personal use. We are not monetizing your rosters.",
   },
   {
-    title: "Hallucination guards",
-    body: "Prefer players in your local DB and rankings. Citations over vibes.",
+    title: "Hallucination audit trail",
+    body: "Prefer local DB / rankings. Prove-it citations. Guardrails on every agent call.",
   },
 ];
 

@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-24"
+      className="relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20"
       aria-labelledby="hero-heading"
     >
       <div className="pointer-events-none absolute inset-0 bg-glow" aria-hidden />
@@ -15,7 +15,7 @@ export default function Hero() {
           <div>
             <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-card)]/80 px-3 py-1.5 text-xs text-[var(--text-muted)] mb-6">
               <span className="pulse-dot" />
-              Private beta · NFL-first · You + friends
+              300 enhancements · NFL-first · Private beta
             </div>
 
             <h1
@@ -28,13 +28,14 @@ export default function Hero() {
             </h1>
 
             <p className="animate-fade-up delay-2 mt-5 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
-              Draft tools end when the clock dies. SnapFantasy is a private fantasy
-              sports OS — live draft, weekly optimize, FAAB, trades, and multi-league
-              portfolio risk — sitting next to Sleeper, Yahoo, and ESPN. Not a host.
-              Not App Store mass market.{" "}
+              Draft Wizard and FantasyPros crush draft week. Then they hand you rankings
+              and wish you luck.{" "}
               <strong className="font-semibold text-[var(--text)]">
-                Your brain for every league.
-              </strong>
+                SnapFantasy is the private full-season OS
+              </strong>{" "}
+              — live draft, Sunday GM, market intel, portfolio heat, FAAB war rooms,
+              trades, and a learning loop that grades your misses. Built for you +
+              friends next to Sleeper/Yahoo/ESPN. Not a host. Not per-seat SaaS.
             </p>
 
             <div className="animate-fade-up delay-3 mt-8 flex flex-col sm:flex-row gap-3">
@@ -43,13 +44,14 @@ export default function Hero() {
                 <ArrowIcon />
               </a>
               <a href="#why-better" className="btn-secondary">
-                See why we beat Draft Wizard
+                Why we beat Draft Wizard
               </a>
             </div>
 
             <p className="animate-fade-up delay-4 mt-6 text-sm text-[var(--text-dim)] leading-relaxed max-w-lg">
-              Private · Local-first · OpenRouter + optional FantasyPros · Built for
-              you + friends, not the App Store crowd
+              Private · Local-first · OpenRouter + optional FantasyPros · 50 + 50 + 200
+              = 300 capabilities · Built for multi-league managers, not the App Store
+              crowd
             </p>
 
             <p className="mt-4 text-sm font-medium text-[var(--text-muted)]">

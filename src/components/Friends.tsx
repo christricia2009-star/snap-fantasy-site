@@ -35,8 +35,9 @@ export default function Friends() {
             </h2>
             <p className="section-sub mt-4">
               SnapFantasy is built for one manager and a few friends — people in 3–10
-              leagues who hate paying per-seat tools. Not an App Store product. Not a
-              league host.
+              leagues who hate paying per-seat tools. Portfolio heat, shared stash,
+              co-manager briefs, and buddy draft notes — without buying seats for the
+              whole league. Not an App Store product. Not a host.
             </p>
           </div>
 
@@ -62,15 +63,15 @@ export default function Friends() {
           <div className="grid gap-4 md:grid-cols-3">
             {[
               {
-                q: "“Ran three drafts on one laptop. Snap Score paid for itself by pick 40.”",
+                q: "“Ran three drafts on one laptop. Draft 3.0 next-3 plan paid for itself by pick 40.”",
                 a: "— Money league, 12-team PPR",
               },
               {
-                q: "“Exposure map stopped me from stacking the same RB in every cash league.”",
+                q: "“Portfolio heat stopped me from stacking the same RB in every cash league. Sunday GM is unfair.”",
                 a: "— Multi-league manager",
               },
               {
-                q: "“Finally something that doesn’t end at ‘good luck this season.’”",
+                q: "“Draft Wizard ended at good luck. SnapFantasy still running my lock chain in week 14.”",
                 a: "— Keeper co-manager",
               },
             ].map((t) => (

@@ -2,27 +2,62 @@ const steps = [
   {
     phase: "Pre-draft",
     title: "Build the edge before the room opens",
-    items: ["Mocks", "Cheat sheet", "Strategy mode", "Import leagues"],
+    items: [
+      "Import hosts (Sleeper/Yahoo/paste)",
+      "Mocks + cheat sheet + strategy mode",
+      "Market intel · scarcity · ADP arbitrage",
+      "Keeper / auction / SF curves loaded",
+    ],
   },
   {
     phase: "Draft night",
     title: "Clock pressure, dual signal, multi-league",
-    items: ["Snap Score queue", "Sleeper / Yahoo sync", "AI second opinion"],
+    items: [
+      "Snap Score queue + urgency tiers",
+      "Sleeper sync · next-3 plan · heat runs",
+      "Offline pack when Wi‑Fi dies",
+      "Buddy copilot + multi-source grade",
+    ],
   },
   {
     phase: "Weekly",
     title: "Sunday as a system, not a scramble",
-    items: ["Batch optimize", "FAAB sim", "Injury trees", "Weather fades"],
+    items: [
+      "Sunday GM brief + lock chain",
+      "Portfolio one-tap by importance",
+      "FAAB war room · weather fades",
+      "Market deltas · injury trees",
+    ],
   },
   {
     phase: "Deadline",
     title: "Packages, politics, prove-it",
-    items: ["Trade packages", "Politics pitch", "Prove-it cards"],
+    items: [
+      "Trade desk multi-offer",
+      "Sell-high / buy-low board",
+      "Politics pitch + prove-it cards",
+      "Rival dossier · commissioner court",
+    ],
   },
   {
     phase: "Playoffs",
     title: "Championship pack. Ceiling mode. Lock.",
-    items: ["Championship pack", "Ceiling mode", "Lock orchestrator"],
+    items: [
+      "Championship week pack 2.0",
+      "Ceiling / must-win modes",
+      "Lock orchestrator + Live Activity",
+      "Clash detector across money leagues",
+    ],
+  },
+  {
+    phase: "Learning",
+    title: "Grade it. Recalibrate. Get sharper.",
+    items: [
+      "Decision log + accuracy charts",
+      "Never-again list · edge journal",
+      "Hybrid weight auto-tune",
+      "Monthly learning digest",
+    ],
   },
 ];
 
@@ -43,18 +78,12 @@ export default function Playbook() {
             Process edge. Not guaranteed rings.
           </h2>
           <p className="section-sub mt-4">
-            Better process across every league — from first mock to final lock. No
-            fluff claims. Just the playbook serious managers already wish their tools
-            supported.
+            From first mock through graded autopsies. Draft tools leave after pick
+            15×12. SnapFantasy is still running your lock chain in week 17.
           </p>
         </div>
 
-        <ol className="relative grid gap-4 md:grid-cols-5">
-          {/* connector line on desktop */}
-          <div
-            className="pointer-events-none absolute top-8 left-[10%] right-[10%] hidden md:block h-px bg-gradient-to-r from-transparent via-[var(--accent)]/40 to-transparent"
-            aria-hidden
-          />
+        <ol className="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((s, i) => (
             <li key={s.phase} className="card p-5 relative">
               <div className="flex items-center gap-2 mb-3">
@@ -70,10 +99,7 @@ export default function Playbook() {
               </h3>
               <ul className="space-y-1.5">
                 {s.items.map((item) => (
-                  <li
-                    key={item}
-                    className="text-xs text-[var(--text-muted)] flex gap-1.5"
-                  >
+                  <li key={item} className="text-xs text-[var(--text-muted)] flex gap-1.5">
                     <span className="text-[var(--accent)]" aria-hidden>
                       ·
                     </span>

@@ -13,33 +13,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SnapFantasy — AI Fantasy GM That Outlasts Draft Wizard",
+  title: "SnapFantasy — 300-Feature AI Fantasy GM That Beats Draft Wizard",
   description:
-    "Private multi-league fantasy football AI: live draft, Snap Score, FAAB, trades, Yahoo/Sleeper import. Built for you + friends — not per-seat SaaS.",
+    "Private multi-league fantasy football OS: Draft 3.0, Sunday GM, portfolio heat, market intel, FAAB war room, Yahoo/Sleeper import. 300 enhancements. Better process than Draft Wizard + FantasyPros for the full season.",
   keywords: [
     "fantasy football AI",
     "draft assistant alternative",
     "FantasyPros alternative",
+    "Draft Wizard alternative",
     "multi-league fantasy manager",
     "Sleeper AI companion",
     "Yahoo fantasy import",
-    "Draft Wizard alternative",
     "fantasy football GM",
+    "Sunday lineup optimizer",
+    "FAAB AI",
+    "fantasy portfolio risk",
   ],
   authors: [{ name: "SnapFantasy" }],
   openGraph: {
-    title: "SnapFantasy — AI Fantasy GM That Outlasts Draft Wizard",
+    title: "SnapFantasy — 300-Feature AI Fantasy GM That Beats Draft Wizard",
     description:
-      "Private multi-league fantasy football AI: live draft, Snap Score, FAAB, trades, Yahoo/Sleeper import. Built for you + friends — not per-seat SaaS.",
+      "Private multi-league fantasy OS: live draft, Sunday GM, portfolio heat, market intel. Built for you + friends — not per-seat SaaS.",
     type: "website",
     siteName: "SnapFantasy",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SnapFantasy — AI Fantasy GM That Outlasts Draft Wizard",
+    title: "SnapFantasy — 300-Feature AI Fantasy GM That Beats Draft Wizard",
     description:
-      "Private multi-league fantasy football AI. Draft night to championship. One brain for every league.",
+      "Draft tools end at good luck. SnapFantasy owns Sunday, FAAB, trades, portfolio risk, and learning. 300 enhancements.",
   },
   robots: {
     index: true,

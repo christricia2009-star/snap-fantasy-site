@@ -37,12 +37,12 @@ export default function MockTimeline() {
           </p>
           <div className="relative pl-4 border-l-2 border-[var(--accent)]/50 space-y-3">
             {[
-              { t: "Pre-draft", d: "Mocks · strategy · import" },
-              { t: "Draft night", d: "Snap Score · multi-league · offline pack" },
-              { t: "Weekly", d: "Lineups · FAAB · news · weather" },
-              { t: "Deadline", d: "Trades · prove-it · politics" },
-              { t: "Playoffs", d: "Ceiling mode · lock orchestrator" },
-              { t: "Learning", d: "Decision log · calibration" },
+              { t: "Pre-draft", d: "Mocks · market intel · import any host" },
+              { t: "Draft night", d: "Draft 3.0 · Snap Score · next-3 plan" },
+              { t: "Weekly", d: "Sunday GM · lock chain · FAAB war room" },
+              { t: "Deadline", d: "Trade desk · prove-it · politics map" },
+              { t: "Playoffs", d: "Championship pack · ceiling · clash detect" },
+              { t: "Learning", d: "Edge journal · hybrid weights · never-again" },
             ].map((s) => (
               <div key={s.t} className="relative">
                 <div className="absolute -left-[21px] top-1.5 h-2 w-2 rounded-full bg-[var(--accent)] shadow-[0_0_8px_var(--accent-glow)]" />

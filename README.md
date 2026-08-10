@@ -1,6 +1,8 @@
 # SnapFantasy Marketing Site
 
-Conversion-focused landing page for **SnapFantasy** — a private, personal AI fantasy sports OS (NFL-first).
+Conversion-focused landing page for **SnapFantasy** — a private, personal AI fantasy sports OS (NFL-first) with **300 enhancements** (Gen1 + Gen2 + Gen3).
+
+Sourced from the latest app build: dual-signal Snap Score, Draft 3.0, Sunday GM, portfolio heat, market intel, OpenRouter agents, host adapters, Learning 2.0.
 
 ## Stack
 
@@ -27,21 +29,22 @@ npm start
 
 ## Sections
 
-1. Hero + multi-league dashboard mock  
-2. Product map (draft, season GM, portfolio, import, agents, FP fuel)  
-3. Why better than Draft Wizard / FantasyPros (comparison centerpiece)  
-4. Season playbook  
-5. You + friends positioning  
-6. Under the hood capability map  
-7. Security & philosophy  
-8. Honest pricing  
-9. FAQ  
-10. Waitlist CTA + footer privacy note  
+1. Hero + multi-league dashboard mock (300 enhancements badge)  
+2. Stats bar + dual-signal thesis  
+3. Product map (9 pillars incl. Sunday GM, market intel, learning, formats)  
+4. Why better than Draft Wizard / FantasyPros / hosts / ChatGPT (comparison centerpiece)  
+5. Season playbook (incl. learning loop)  
+6. You + friends positioning  
+7. Full capability map (tabbed Gen1–Gen3 pillars)  
+8. Security & philosophy  
+9. Honest pricing  
+10. FAQ  
+11. Waitlist CTA + footer privacy note  
 
 ## SEO meta
 
-- **Title:** SnapFantasy — AI Fantasy GM That Outlasts Draft Wizard  
-- **Description:** Private multi-league fantasy football AI: live draft, Snap Score, FAAB, trades, Yahoo/Sleeper import. Built for you + friends — not per-seat SaaS.
+- **Title:** SnapFantasy — 300-Feature AI Fantasy GM That Beats Draft Wizard  
+- **Description:** Private multi-league fantasy OS: Draft 3.0, Sunday GM, portfolio heat, market intel, FAAB war room, Yahoo/Sleeper import.
 
 ## Waitlist
 
