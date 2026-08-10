@@ -16,14 +16,14 @@ export default function UnderTheHood() {
         <div className="max-w-2xl mb-10">
           <p className="section-label mb-3">
             <span className="h-1 w-1 rounded-full bg-[var(--accent)]" aria-hidden />
-            Deep dive by category
+            Deep dive · open the vault
           </p>
           <h2 id="hood-heading" className="section-title">
-            Open any category. Draft Wizard doesn&apos;t ship this list.
+            Open any category. Draft Wizard doesn&apos;t even have this menu.
           </h2>
           <p className="section-sub mt-4">
-            Not a feature-count brag. Just the actual surface area of a season-long GM
-            — category by category, items inside each card.
+            Not a feature-count flex for LinkedIn. The actual surface of a season-long
+            GM — tap a category, read the weapons. This is why draft-week apps feel thin.
           </p>
         </div>
 

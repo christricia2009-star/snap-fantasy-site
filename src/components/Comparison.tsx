@@ -84,38 +84,38 @@ const rows = [
 const punchlines = [
   {
     title: "They end at “good luck this season.”",
-    body: "We start there — Sunday GM, FAAB war rooms, trade desk, playoff packs, and graded learning.",
+    body: "Cute. We start the real product there — Sunday GM, FAAB war rooms, trade desk, playoff packs, graded learning.",
   },
   {
-    title: "Don’t buy four seats.",
-    body: "Beat managers who only open the host app on Sunday. Your friends stay free.",
+    title: "Don’t buy four seats. Buy an edge.",
+    body: "Destroy managers who only open the host app on Sunday. Your friends stay free. You run the OS.",
   },
   {
     title: "Market + judgment + your state.",
-    body: "FP prior · OpenRouter posterior · local multi-league memory. Dual-signal edge they can’t ship.",
+    body: "FP prior · OpenRouter posterior · local multi-league memory. Dual-signal edge they structurally cannot ship.",
   },
   {
     title: "Who is Draft Wizard in week 12?",
-    body: "A great memory. SnapFantasy is still locking lineups, running FAAB, and grading your misses.",
+    body: "A nostalgic PDF. SnapFantasy is still locking lineups, nuking FAAB mistakes, and grading your flex fails.",
   },
 ];
 
 const gaps = [
   {
-    title: "What Draft Wizard / FantasyPros still own",
-    body: "Polished host auto-crossoff under a brutal 30s clock. Massive ECR ecosystem. Years of draft UX. If your only job is ranking and drafting, they remain world-class — we respect that.",
+    title: "Fine — they still crush pure draft week",
+    body: "30s clock auto-crossoff. Giant ECR. Years of polish. If fantasy is a three-hour hobby once a year, tip your cap and stay there.",
   },
   {
-    title: "The gap they don’t close",
-    body: "They optimize draft week for millions. SnapFantasy optimizes YOUR entire season across every league — lock chains, portfolio heat, multi-agent debate, and a learning loop that recalibrates when you’re wrong.",
+    title: "The gap they never close",
+    body: "They optimize draft week for millions of tourists. SnapFantasy optimizes YOUR entire season across every money league — lock chains, portfolio heat, agent debate, and a learning loop that gets personal.",
   },
   {
-    title: "The gap host apps don’t close",
-    body: "Sleeper/Yahoo/ESPN are excellent rooms. They’re not a personal AI GM, not a multi-league risk book, and not a private decision OS with your notes in every call.",
+    title: "Host apps are scoreboards",
+    body: "Sleeper/Yahoo/ESPN are great rooms. They are not a private AI GM, not a multi-league risk book, and not a brain with your notes in every call. Rooms ≠ front office.",
   },
   {
-    title: "The gap ChatGPT doesn’t close",
-    body: "Generic chat has no live rosters, no FAAB budgets, no house rules, no graded history. SnapFantasy is tool-using, local-state, hallucination-guarded fantasy ops.",
+    title: "ChatGPT is not your co-manager",
+    body: "No live rosters. No FAAB. No house rules. No graded history. SnapFantasy is tool-using, local-state, hallucination-guarded fantasy ops — not vibes with a spinner.",
   },
 ];
 
@@ -137,17 +137,19 @@ export default function Comparison() {
         <div className="max-w-3xl mb-10 sm:mb-12">
           <p className="section-label mb-3">
             <span className="h-1 w-1 rounded-full bg-[var(--accent)]" aria-hidden />
-            Why better than Draft Wizard / FantasyPros / host apps
+            Head-to-head · no mercy
           </p>
           <h2 id="why-heading" className="section-title">
             Draft Wizard & FantasyPros?{" "}
-            <span className="text-[var(--accent-bright)]">We&apos;re just better.</span>
+            <span className="text-[var(--accent-bright)]">
+              Different sport. We win ours.
+            </span>
           </h2>
           <p className="section-sub mt-4">
-            Fair shot: they&apos;re excellent at draft week. Host apps are excellent
-            rooms. Then the season happens — five leagues, FAAB, injuries, trade
-            politics, playoffs — and those tools go quiet. SnapFantasy doesn&apos;t.
-            Different job. Heavier weight class.
+            Yes, they&apos;re excellent at draft week. Host apps are excellent rooms.
+            Then reality hits: five leagues, FAAB chaos, injuries, trade politics,
+            playoffs — and those tools go radio silent. SnapFantasy stays loud. Different
+            job. Unfair weight class. Bring a bigger lunch.
           </p>
         </div>
 
@@ -194,22 +196,22 @@ export default function Comparison() {
                   FantasyPros / Draft Wizard
                 </p>
                 <h3 className="text-lg font-semibold text-[var(--text)] mb-2">
-                  Built to win draft week
+                  Built to win… three hours
                 </h3>
                 <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                  Polished host auto-crossoff. Huge ECR. Years of UX. World-class if the
-                  job ends when you draft.
+                  Polished host auto-crossoff. Huge ECR. Years of UX. World-class if
+                  fantasy ends when you draft. Spoiler: it doesn&apos;t.
                 </p>
               </div>
-              <div className="rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)] p-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-[var(--accent)] mb-2">
-                  SnapFantasy Draft 3.0
+              <div className="rounded-xl border border-[var(--accent)]/30 bg-[var(--accent-dim)] p-4">
+                <p className="text-xs font-black uppercase tracking-wider text-[var(--accent-bright)] mb-2">
+                  SnapFantasy on draft night → then forever
                 </p>
                 <ul className="space-y-2 text-sm text-[var(--text-muted)]">
                   <li>· Dual-signal Snap Score (market + needs + AI)</li>
                   <li>· Multi-league rooms · urgency tiers · next-3 plan</li>
                   <li>· Offline pack · heat runs · steal list · SF/TEP curves</li>
-                  <li>· Then the season OS kicks in — they hand you “good luck”</li>
+                  <li>· Then the season OS kicks in while they tweet “good luck”</li>
                 </ul>
               </div>
             </div>

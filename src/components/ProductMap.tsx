@@ -10,7 +10,7 @@ const categories = [
     id: "draft",
     icon: "⚡",
     title: "Live draft",
-    blurb: "While Draft Wizard is still your co-pilot for one room.",
+    blurb: "Draft Wizard is a co-pilot for one room. We run the whole airport.",
     items: [
       "Simultaneous multi-league draft rooms",
       "Snap Score: market + needs + AI",
@@ -25,7 +25,7 @@ const categories = [
     id: "sunday",
     icon: "🎯",
     title: "Sunday command",
-    blurb: "FantasyPros doesn’t open five lock times for you.",
+    blurb: "FantasyPros doesn’t juggle five lock times. We do — before coffee.",
     items: [
       "Multi-league Sunday GM brief",
       "Lock chain across every slate",
@@ -39,7 +39,7 @@ const categories = [
     id: "lineups",
     icon: "🧠",
     title: "Lineups & start/sit",
-    blurb: "Where “good luck this season” tools ghost you.",
+    blurb: "Where “good luck this season” tools leave you on read.",
     items: [
       "Two-stage Optimize Lineup pipeline",
       "Start/Sit with confidence bands",
@@ -81,7 +81,7 @@ const categories = [
     id: "portfolio",
     icon: "📊",
     title: "Multi-league portfolio",
-    blurb: "Host apps can’t see Bijan in three money leagues.",
+    blurb: "Host apps are blind to Bijan in three money leagues. We’re not.",
     items: [
       "Exposure heat map",
       "Anti-correlate across leagues",
@@ -95,7 +95,7 @@ const categories = [
     id: "market",
     icon: "📈",
     title: "Market intel",
-    blurb: "Use FantasyPros as fuel — never as the whole product.",
+    blurb: "FantasyPros is fuel. We are the engine. Big difference.",
     items: [
       "Consensus deltas · ECR velocity",
       "ADP vs ECR arbitrage",
@@ -188,15 +188,15 @@ export default function ProductMap() {
         <div className="max-w-2xl mb-12 sm:mb-16">
           <p className="section-label mb-3">
             <span className="h-1 w-1 rounded-full bg-[var(--accent)]" aria-hidden />
-            What you get
+            The arsenal
           </p>
           <h2 id="product-heading" className="section-title">
-            Everything they skip after “good luck.”
+            Everything they ghost after “good luck.”
           </h2>
           <p className="section-sub mt-4">
-            Draft Wizard and FantasyPros are excellent at rankings and draft night.
-            SnapFantasy is the OS for every category that decides your season —
-            broken out below. No fluff generations. Just the tools that win weeks.
+            Rankings apps clock out. Host apps keep score. SnapFantasy is the full
+            category stack that decides real seasons — draft through autopsy. Open a
+            card. Feel the weight class shift.
           </p>
         </div>
 
@@ -248,23 +248,24 @@ export default function ProductMap() {
             <MockMarketIntel />
             <MockExposure />
             <MockScript />
-            <div className="card p-5 flex flex-col justify-center border-[var(--accent)]/25 bg-[var(--accent-dim)]/40">
-              <p className="text-xs font-semibold uppercase tracking-wider text-[var(--accent)] mb-2">
-                The honest take
+            <div className="card p-5 flex flex-col justify-center border-2 border-[var(--accent)]/40 bg-[var(--accent-dim)]/50">
+              <p className="text-xs font-black uppercase tracking-wider text-[var(--accent-bright)] mb-2">
+                The only take that matters
               </p>
-              <p className="text-lg font-bold text-[var(--text)] tracking-tight leading-snug">
+              <p className="text-xl font-black text-[var(--text)] tracking-tight leading-snug">
                 They’re draft week.{" "}
-                <span className="text-[var(--accent-bright)]">We’re the season.</span>
+                <span className="text-[var(--accent-bright)]">We&apos;re the season.</span>
               </p>
-              <p className="mt-2 text-sm text-[var(--text-muted)] leading-relaxed">
-                Rankings apps don’t run your lock chain, FAAB war room, or portfolio
-                heat. Host apps don’t learn when your flex was wrong. We do.
+              <p className="mt-2 text-sm text-[var(--text-muted)] leading-relaxed font-medium">
+                Rankings apps don&apos;t run lock chains, FAAB war rooms, or portfolio
+                heat. Host apps don&apos;t learn when your flex was trash. We do — every
+                week, every league, no apology.
               </p>
               <a
                 href="#why-better"
-                className="mt-4 text-sm font-semibold text-[var(--accent-bright)] hover:underline"
+                className="mt-4 text-sm font-black text-[var(--accent-bright)] hover:underline"
               >
-                See the head-to-head →
+                Watch us dunk head-to-head →
               </a>
             </div>
           </div>

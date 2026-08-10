@@ -1,4 +1,5 @@
 import Nav from "@/components/Nav";
+import TrashTalkTicker from "@/components/TrashTalkTicker";
 import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
 import ProductMap from "@/components/ProductMap";
@@ -18,6 +19,7 @@ export default function Home() {
       <Nav />
       <main className="flex-1">
         <Hero />
+        <TrashTalkTicker />
         <StatsBar />
         <ProductMap />
         <Comparison />

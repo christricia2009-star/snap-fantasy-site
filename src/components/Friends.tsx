@@ -31,7 +31,7 @@ export default function Friends() {
               For you + friends
             </p>
             <h2 id="friends-heading" className="section-title">
-              Private distribution. Not mass-market SaaS.
+              You + friends. Not the whole App Store.
             </h2>
             <p className="section-sub mt-4">
               SnapFantasy is built for one manager and a few friends — people in 3–10

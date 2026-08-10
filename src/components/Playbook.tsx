@@ -72,14 +72,15 @@ export default function Playbook() {
         <div className="max-w-2xl mb-12">
           <p className="section-label mb-3">
             <span className="h-1 w-1 rounded-full bg-[var(--accent)]" aria-hidden />
-            How you win with it
+            How you run the table
           </p>
           <h2 id="playbook-heading" className="section-title">
-            Process edge. Not guaranteed rings.
+            Process so sharp it feels illegal.
           </h2>
           <p className="section-sub mt-4">
-            From first mock through graded autopsies. Draft tools leave after pick
-            15×12. SnapFantasy is still running your lock chain in week 17.
+            No guaranteed rings — just an operating system that makes managers who
+            “wing it on Sleeper” look casual. Draft tools leave after pick 15×12. We
+            still own your lock chain in week 17.
           </p>
         </div>
 

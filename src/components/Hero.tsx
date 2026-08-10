@@ -11,60 +11,86 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-60" aria-hidden />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Swagger strip */}
-        <div className="animate-fade-up mb-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-2xl border border-[var(--accent)]/25 bg-[var(--accent-dim)] px-4 py-3 text-center sm:justify-start sm:text-left">
-          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[var(--accent-bright)]">
-            <span className="pulse-dot" />
-            Best in class · period
-          </span>
-          <span className="hidden sm:inline text-[var(--text-dim)]">·</span>
-          <p className="text-sm text-[var(--text)] font-medium">
-            Draft Wizard & FantasyPros? Great for{" "}
-            <span className="text-[var(--text-muted)] line-through decoration-[var(--text-dim)]">
-              draft week
+        {/* Over-the-top swagger strip */}
+        <div className="animate-fade-up mb-8 rounded-2xl border-2 border-[var(--accent)]/40 bg-gradient-to-r from-[var(--accent-dim)] via-[var(--bg-card)] to-[var(--accent-dim)] px-4 py-4 text-center sm:text-left sm:px-5">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-3 gap-y-2">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-[#04120a] shadow-[0_0_24px_var(--accent-glow)]">
+              <span className="pulse-dot !bg-[#04120a] !shadow-none" />
+              Undisputed #1
             </span>
-            . We own the whole damn season.
-          </p>
+            <p className="text-sm sm:text-base font-bold text-[var(--text)]">
+              Draft Wizard & FantasyPros built a{" "}
+              <span className="text-[var(--text-muted)] line-through decoration-2 decoration-[var(--danger)]/70">
+                draft-week rental
+              </span>
+              . We built a{" "}
+              <span className="text-[var(--accent-bright)]">full-season war machine.</span>
+            </p>
+          </div>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <div className="animate-fade-up delay-1 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-card)]/80 px-3 py-1.5 text-xs text-[var(--text-muted)] mb-6">
-              Private · Multi-league · NFL-first
+            <div className="animate-fade-up delay-1 inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/30 bg-[var(--accent-dim)] px-3 py-1.5 text-xs font-semibold text-[var(--accent-bright)] mb-6">
+              Private · Ruthless · Multi-league · NFL-first
             </div>
 
             <h1
               id="hero-heading"
-              className="animate-fade-up delay-1 text-[clamp(2.35rem,5.8vw,3.9rem)] font-bold tracking-tight leading-[1.05] text-[var(--text)]"
+              className="animate-fade-up delay-1 text-[clamp(2.5rem,6.2vw,4.25rem)] font-black tracking-tight leading-[0.98] text-[var(--text)]"
             >
-              The best fantasy AI.{" "}
-              <span className="text-[var(--accent-bright)]">Not even close.</span>
+              The best fantasy AI
+              <br />
+              <span className="text-[var(--accent-bright)] drop-shadow-[0_0_40px_var(--accent-glow)]">
+                on the planet.
+              </span>
             </h1>
 
-            <p className="animate-fade-up delay-2 mt-5 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
-              Who is Draft Wizard when the season starts? Who is FantasyPros on a
-              Sunday with five leagues locking?{" "}
-              <strong className="font-semibold text-[var(--text)]">
-                SnapFantasy is the private GM that still works after the draft —
+            <p className="animate-fade-up delay-2 mt-3 text-base sm:text-lg font-semibold text-[var(--text-muted)]">
+              Not a hot take. A mismatch.
+            </p>
+
+            <p className="animate-fade-up delay-2 mt-4 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
+              Who is{" "}
+              <strong className="text-[var(--text)]">Draft Wizard</strong> when the
+              season starts? Who is{" "}
+              <strong className="text-[var(--text)]">FantasyPros</strong> when five
+              leagues lock in 90 minutes?{" "}
+              <strong className="font-bold text-[var(--text)]">
+                SnapFantasy is the private AI GM that still cooks after the draft —
               </strong>{" "}
-              live rooms, Snap Score, FAAB war rooms, trades, portfolio heat, and a
-              brain that learns your misses. They sell draft week. We win weeks.
+              Snap Score, Sunday command, FAAB war rooms, trade politics, portfolio heat,
+              and a brain that grades your misses. They sell rankings. We run the front
+              office.
             </p>
 
             <div className="animate-fade-up delay-3 mt-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
               {[
-                { them: "Draft Wizard", us: "Draft night + every Sunday after" },
-                { them: "FantasyPros", us: "Market fuel + YOUR judgment" },
-                { them: "Host apps", us: "Rooms are free. Brains aren’t." },
+                {
+                  them: "Draft Wizard",
+                  us: "Cute for 3 hours. We go 17 weeks.",
+                },
+                {
+                  them: "FantasyPros",
+                  us: "Market fuel. Not the whole meal.",
+                },
+                {
+                  them: "Host apps",
+                  us: "Scoreboards. We bring the brain.",
+                },
               ].map((row) => (
                 <div
                   key={row.them}
-                  className="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] px-3 py-2.5"
+                  className="rounded-xl border border-[var(--border-strong)] bg-[var(--bg-card)] px-3 py-3 relative overflow-hidden"
                 >
-                  <div className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-dim)]">
-                    {row.them}
+                  <div
+                    className="absolute top-0 left-0 h-full w-1 bg-[var(--accent)]"
+                    aria-hidden
+                  />
+                  <div className="text-[10px] font-black uppercase tracking-wider text-[var(--text-dim)] pl-1">
+                    vs {row.them}
                   </div>
-                  <div className="text-xs font-semibold text-[var(--accent-bright)] mt-0.5 leading-snug">
+                  <div className="text-xs font-bold text-[var(--accent-bright)] mt-1 leading-snug pl-1">
                     {row.us}
                   </div>
                 </div>
@@ -72,26 +98,29 @@ export default function Hero() {
             </div>
 
             <div className="animate-fade-up delay-3 mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="#cta" className="btn-primary">
-                Get the better stack
+              <a href="#cta" className="btn-primary !text-base !px-6 !py-3.5">
+                Claim the unfair advantage
                 <ArrowIcon />
               </a>
-              <a href="#why-better" className="btn-secondary">
-                Roast Draft Wizard →
+              <a href="#why-better" className="btn-secondary !text-base !px-6 !py-3.5">
+                Publicly dunk on Draft Wizard →
               </a>
             </div>
 
-            <p className="animate-fade-up delay-4 mt-6 text-sm text-[var(--text-dim)] leading-relaxed max-w-lg">
-              Private · Local-first · OpenRouter + optional FP ranks · You + friends —
-              not per-seat SaaS for the whole league
+            <p className="animate-fade-up delay-4 mt-6 text-sm font-medium text-[var(--text-dim)] leading-relaxed max-w-lg">
+              Private · Local-first · OpenRouter + optional FP · Built for killers in
+              3–10 leagues — not tourists buying another draft-week seat
             </p>
           </div>
 
           <div className="animate-fade-up delay-2 relative">
             <div
-              className="absolute -inset-4 rounded-3xl bg-[var(--accent)]/10 blur-2xl"
+              className="absolute -inset-4 rounded-3xl bg-[var(--accent)]/15 blur-2xl"
               aria-hidden
             />
+            <div className="absolute -top-3 -right-2 z-10 rotate-6 rounded-lg bg-[var(--accent)] px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-[#04120a] shadow-[0_0_24px_var(--accent-glow)] sm:-right-4">
+              Weight class: unfair
+            </div>
             <MockDashboard />
           </div>
         </div>

@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SnapFantasy — Better Than Draft Wizard & FantasyPros",
+  title: "SnapFantasy — The Best Fantasy AI. Draft Wizard Who?",
   description:
-    "Private multi-league fantasy football AI that outplays Draft Wizard and FantasyPros after draft week: Sunday GM, portfolio heat, FAAB war room, trades, Yahoo/Sleeper import. Built for you + friends.",
+    "The private multi-league fantasy AI that makes Draft Wizard and FantasyPros look like draft-week rentals. Sunday GM, portfolio heat, FAAB war room, trades. Built for killers — not tourists.",
   keywords: [
     "fantasy football AI",
     "draft assistant alternative",
@@ -31,18 +31,18 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "SnapFantasy" }],
   openGraph: {
-    title: "SnapFantasy — Better Than Draft Wizard & FantasyPros",
+    title: "SnapFantasy — The Best Fantasy AI. Draft Wizard Who?",
     description:
-      "Private multi-league fantasy OS. Draft Wizard owns draft week. We own the season.",
+      "Draft Wizard owns three hours. We own the season. Private multi-league AI GM.",
     type: "website",
     siteName: "SnapFantasy",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SnapFantasy — Better Than Draft Wizard & FantasyPros",
+    title: "SnapFantasy — The Best Fantasy AI. Draft Wizard Who?",
     description:
-      "Who is Draft Wizard in week 12? SnapFantasy still runs lineups, FAAB, portfolio risk, and learning.",
+      "Who is Draft Wizard in week 12? A memory. SnapFantasy still runs the front office.",
   },
   robots: {
     index: true,

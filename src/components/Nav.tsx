@@ -93,7 +93,7 @@ export default function Nav() {
             )}
           </button>
           <a href="#cta" className="btn-primary !py-2 !px-4 !text-sm hidden sm:inline-flex">
-            Join private beta
+            Get the edge
           </a>
           <button
             type="button"

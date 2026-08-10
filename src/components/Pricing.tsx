@@ -12,7 +12,8 @@ export default function Pricing() {
             Pricing · honest
           </p>
           <h2 id="pricing-heading" className="section-title">
-            Stop renting draft week. Own the season.
+            Stop renting draft week.{" "}
+            <span className="text-[var(--accent-bright)]">Buy a weapon.</span>
           </h2>
           <p className="section-sub mt-4">
             Draft tools sell seats. Hosts are free but dumb about your portfolio.
