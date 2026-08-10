@@ -95,8 +95,8 @@ const punchlines = [
     body: "FP prior · OpenRouter posterior · local multi-league memory. Dual-signal edge they can’t ship.",
   },
   {
-    title: "300 reasons draft week isn’t enough.",
-    body: "Gen1 win stack, Gen2 portfolio/import, Gen3 market intel + season domination. Coverage map included.",
+    title: "Who is Draft Wizard in week 12?",
+    body: "A great memory. SnapFantasy is still locking lineups, running FAAB, and grading your misses.",
   },
 ];
 
@@ -140,14 +140,14 @@ export default function Comparison() {
             Why better than Draft Wizard / FantasyPros / host apps
           </p>
           <h2 id="why-heading" className="section-title">
-            Excellent draft products.{" "}
-            <span className="text-[var(--accent-bright)]">Wrong job for the season.</span>
+            Draft Wizard & FantasyPros?{" "}
+            <span className="text-[var(--accent-bright)]">We&apos;re just better.</span>
           </h2>
           <p className="section-sub mt-4">
-            Draft Wizard and FantasyPros are excellent draft products. Host apps are
-            excellent rooms. SnapFantasy is a different job: private multi-league AI GM
-            that owns draft night <em>and</em> every Sunday after — with 300 enhancements
-            aimed at edge, not content churn.
+            Fair shot: they&apos;re excellent at draft week. Host apps are excellent
+            rooms. Then the season happens — five leagues, FAAB, injuries, trade
+            politics, playoffs — and those tools go quiet. SnapFantasy doesn&apos;t.
+            Different job. Heavier weight class.
           </p>
         </div>
 

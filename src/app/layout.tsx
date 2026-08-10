@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SnapFantasy — 300-Feature AI Fantasy GM That Beats Draft Wizard",
+  title: "SnapFantasy — Better Than Draft Wizard & FantasyPros",
   description:
-    "Private multi-league fantasy football OS: Draft 3.0, Sunday GM, portfolio heat, market intel, FAAB war room, Yahoo/Sleeper import. 300 enhancements. Better process than Draft Wizard + FantasyPros for the full season.",
+    "Private multi-league fantasy football AI that outplays Draft Wizard and FantasyPros after draft week: Sunday GM, portfolio heat, FAAB war room, trades, Yahoo/Sleeper import. Built for you + friends.",
   keywords: [
     "fantasy football AI",
     "draft assistant alternative",
@@ -31,18 +31,18 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "SnapFantasy" }],
   openGraph: {
-    title: "SnapFantasy — 300-Feature AI Fantasy GM That Beats Draft Wizard",
+    title: "SnapFantasy — Better Than Draft Wizard & FantasyPros",
     description:
-      "Private multi-league fantasy OS: live draft, Sunday GM, portfolio heat, market intel. Built for you + friends — not per-seat SaaS.",
+      "Private multi-league fantasy OS. Draft Wizard owns draft week. We own the season.",
     type: "website",
     siteName: "SnapFantasy",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SnapFantasy — 300-Feature AI Fantasy GM That Beats Draft Wizard",
+    title: "SnapFantasy — Better Than Draft Wizard & FantasyPros",
     description:
-      "Draft tools end at good luck. SnapFantasy owns Sunday, FAAB, trades, portfolio risk, and learning. 300 enhancements.",
+      "Who is Draft Wizard in week 12? SnapFantasy still runs lineups, FAAB, portfolio risk, and learning.",
   },
   robots: {
     index: true,

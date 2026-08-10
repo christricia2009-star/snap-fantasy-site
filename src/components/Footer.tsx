@@ -24,7 +24,7 @@ export default function Footer() {
               Why better
             </a>
             <a href="#features" className="text-[var(--text-muted)] hover:text-[var(--text)]">
-              300 features
+              Features
             </a>
             <a href="#playbook" className="text-[var(--text-muted)] hover:text-[var(--text)]">
               Playbook

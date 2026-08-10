@@ -16,8 +16,8 @@ export default function Pricing() {
           </h2>
           <p className="section-sub mt-4">
             Draft tools sell seats. Hosts are free but dumb about your portfolio.
-            SnapFantasy is one private brain — 300 enhancements — with usage you
-            control, not N× premium subs for friends who just want the room.
+            SnapFantasy is one private brain with usage you control — not N× premium
+            subs so your friends can open the same rankings app.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function Pricing() {
             Re-read why we win
           </a>
           <a href="#features" className="btn-secondary">
-            Browse 300 features
+            Browse features
           </a>
         </div>
       </div>

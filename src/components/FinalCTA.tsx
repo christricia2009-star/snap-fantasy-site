@@ -30,15 +30,15 @@ export default function FinalCTA() {
       <div className="relative mx-auto max-w-3xl px-4 sm:px-6 text-center">
         <p className="section-label mb-3 justify-center">
           <span className="pulse-dot" />
-          Private beta · 300 enhancements
+          Private beta · better than draft week
         </p>
         <h2 id="cta-heading" className="section-title">
-          Draft tools rent you a week. Own the whole season.
+          Draft Wizard can keep draft week. We&apos;ll take the championship.
         </h2>
         <p className="section-sub mt-4 mx-auto">
-          Join the private beta for SnapFantasy — multi-league fantasy football AI with
-          Sunday GM, portfolio heat, market intel, and a learning loop draft apps never
-          ship. TestFlight when ready.
+          Join the private beta. Multi-league AI that still works when FantasyPros is
+          just a rankings tab and the host app is just a scoreboard. TestFlight when
+          ready.
         </p>
 
         <form
@@ -88,8 +88,7 @@ export default function FinalCTA() {
           </a>
         </div>
         <p className="mt-4 text-xs text-[var(--text-dim)]">
-          Private · Local-first · OpenRouter-native · FP = market · AI = judgment · your
-          leagues = moat
+          Private · Local-first · OpenRouter-native · Who needs another draft-week sub?
         </p>
       </div>
     </section>

@@ -4,141 +4,175 @@ import MockSnapScore from "./mocks/MockSnapScore";
 import MockSundayGM from "./mocks/MockSundayGM";
 import MockMarketIntel from "./mocks/MockMarketIntel";
 
-const pillars = [
+/** Feature categories — no gen labels; each card is a category with items inside. */
+const categories = [
   {
     id: "draft",
     icon: "⚡",
-    gen: "Gen1–3",
-    title: "Live draft room · Draft 3.0",
-    blurb:
-      "Simultaneous multi-league drafts. Urgency tiers, heat runs, next-3 plan, steals.",
-    points: [
-      "Start / Continue Draft per league — multi-league at once",
-      "Snap Score queue: market/FP + needs + AI dual-signal",
-      "Sleeper sync · offline pack 2.0 · watch top-3 complications",
-      "Reach/steal radar · Zero/Hero/Robust · SF/TEP curves · auction snipe",
-      "Poison-the-well · handcuff auto-queue · post-draft multi-source grade",
-      "Buddy copilot notes · draft transcript AI · snake path simulator",
+    title: "Live draft",
+    blurb: "While Draft Wizard is still your co-pilot for one room.",
+    items: [
+      "Simultaneous multi-league draft rooms",
+      "Snap Score: market + needs + AI",
+      "Urgency tiers · heat runs · next-3 plan",
+      "Reach / steal radar · Zero / Hero / Robust",
+      "Sleeper sync · offline pack · auction snipe",
+      "SF / TE premium curves · handcuff queue",
+      "Buddy copilot · post-draft multi-source grade",
     ],
   },
   {
     id: "sunday",
     icon: "🎯",
-    gen: "Gen3",
-    title: "Sunday GM command",
-    blurb: "The morning OS. One place for every league before kickoff.",
-    points: [
-      "Sunday GM brief — multi-league priorities + narrative",
-      "Lock chain timeline across every slate",
-      "Inactive apocalypse planner when starters go out",
-      "Portfolio Sunday one-tap optimize by importance",
-      "FAAB war room across leagues · budget-aware week plan",
-      "Widgets · Live Activity lock · Siri shortcuts on game day",
+    title: "Sunday command",
+    blurb: "FantasyPros doesn’t open five lock times for you.",
+    items: [
+      "Multi-league Sunday GM brief",
+      "Lock chain across every slate",
+      "Inactive apocalypse planner",
+      "One-tap optimize by league importance",
+      "FAAB war room · budget-aware week plan",
+      "Widgets · Live Activity · Siri on game day",
     ],
   },
   {
-    id: "gm",
+    id: "lineups",
     icon: "🧠",
-    gen: "Gen1–3",
-    title: "Season domination AI",
-    blurb: "Where draft-only apps stop — and where you win weeks.",
-    points: [
-      "Two-stage Optimize Lineup (cheap digest → smart decision)",
-      "Ceiling / floor / must-win modes · flex optimizer · confidence bands",
-      "FAAB sim 2.0 · waiver heat · drop candidates · add priority queue",
-      "Trade desk multi-offer · sell-high/buy-low · prove-it deep mode",
-      "Weather fade auto · injury trees · opponent projected lineup",
-      "Championship pack · live score pivot · playoff path planner",
+    title: "Lineups & start/sit",
+    blurb: "Where “good luck this season” tools ghost you.",
+    items: [
+      "Two-stage Optimize Lineup pipeline",
+      "Start/Sit with confidence bands",
+      "Ceiling / floor / must-win modes",
+      "Flex optimizer · contingency starters",
+      "Weather fades · injury replacement trees",
+      "Opponent projected lineup",
+    ],
+  },
+  {
+    id: "waivers",
+    icon: "💰",
+    title: "Waivers & FAAB",
+    blurb: "Market heat + your budget across the book.",
+    items: [
+      "FAAB sim · waiver market heat",
+      "Drop candidates ranked",
+      "Add priority queue",
+      "Rest-of-week waiver plan",
+      "Cross-league FAAB allocation",
+      "Streamer calendar (DEF/K)",
+    ],
+  },
+  {
+    id: "trades",
+    icon: "🔄",
+    title: "Trades & politics",
+    blurb: "Packages, prove-it cards, rival dossiers.",
+    items: [
+      "Trade analyzer + package generator",
+      "Trade desk multi-offer",
+      "Sell-high / buy-low board",
+      "Prove-it deep mode",
+      "Politics map · commissioner court",
+      "Rival psychology dossier",
     ],
   },
   {
     id: "portfolio",
     icon: "📊",
-    gen: "Gen2–3",
-    title: "Portfolio heat (unique)",
-    blurb: "Treat 3–10 leagues like a book — not siloed host apps.",
-    points: [
-      "Exposure heat map · anti-correlate engine 2.0",
-      "Money-league attention weights · week priority stack",
-      "Cross-league FAAB allocation · shared stash 2.0",
-      "Conflict ownership · do-not-stack rules · injury correlation budget",
-      "Championship clash detector · bankroll allocation advice",
-      "Silent partner / co-manager SMS brief · friend circle portfolio",
+    title: "Multi-league portfolio",
+    blurb: "Host apps can’t see Bijan in three money leagues.",
+    items: [
+      "Exposure heat map",
+      "Anti-correlate across leagues",
+      "Money-league attention weights",
+      "Week priority stack · lock timeline",
+      "Shared stash · friend circle",
+      "Championship clash detector",
     ],
   },
   {
     id: "market",
     icon: "📈",
-    gen: "Gen3",
-    title: "Market intel board",
-    blurb: "FantasyPros as fuel — never the whole product.",
-    points: [
-      "Nightly consensus delta · ECR velocity · expert split heatmap",
-      "ADP vs ECR arbitrage · positional scarcity · waiver market heat",
-      "Playoff-week rank flip · SOS-adjusted ROS · Vegas totals",
-      "Snap share cliffs · rookie trajectory · veteran cliff detector",
-      "Always: “FP says X · Snap says Y because…”",
-      "Works offline without FP — optional API for ECR/ADP overlay",
+    title: "Market intel",
+    blurb: "Use FantasyPros as fuel — never as the whole product.",
+    items: [
+      "Consensus deltas · ECR velocity",
+      "ADP vs ECR arbitrage",
+      "Expert split heatmap · scarcity index",
+      "Playoff rank flip · SOS-adjusted ROS",
+      "Vegas totals · snap share cliffs",
+      "Always: FP says X · Snap says Y",
     ],
   },
   {
     id: "agents",
     icon: "🤖",
-    gen: "Gen2–3",
-    title: "OpenRouter agent stack",
-    blurb: "Scout / Risk / GM / Capologist — debate, then act under spend caps.",
-    points: [
-      "4-agent multi-model debate · constitution + house rules injected",
-      "Weekly script · post-week autopsy · season thesis · voice debrief",
-      "Trade politics · commissioner court · rival psychology dossier",
-      "Memory-augmented chat · NL multi-league ops · tool-using agents",
-      "Hallucination audit trail · explainability share cards",
-      "Counterfactual week sim · A/B outcome learning · FP-do vs I-should",
+    title: "AI agents",
+    blurb: "Scout / Risk / GM / Cap — debate under spend caps.",
+    items: [
+      "4-agent multi-model debate",
+      "Weekly script · post-week autopsy",
+      "Season thesis · voice debrief",
+      "Memory chat · house rules injected",
+      "Hallucination audit trail",
+      "Counterfactual week sim",
     ],
   },
   {
     id: "import",
     icon: "🔗",
-    gen: "Gen2–3",
-    title: "Host import · any room",
-    blurb: "You stay on free hosts. Snap is the brain next to them.",
-    points: [
-      "Sleeper sync + enhanced poller · Yahoo OAuth full roster",
-      "Paste invite / URL / HTML / email → AI structures league",
-      "Gmail fantasy scan (opt-in) · CSV · screenshot OCR path",
-      "ESPN / CBS / NFL.com / Fleaflicker paste adapters",
-      "Settings hash watchdog · host change detector · bulk re-sync",
-      "League clone for mocks · unified import wizard",
+    title: "Host import",
+    blurb: "Keep Sleeper/Yahoo free. Snap is the brain.",
+    items: [
+      "Sleeper sync · Yahoo OAuth",
+      "Paste invite / URL / HTML / email",
+      "Gmail fantasy scan (opt-in)",
+      "ESPN / CBS / NFL.com / Fleaflicker paste",
+      "CSV · OCR path · bulk re-sync",
+      "Settings drift watchdog",
     ],
   },
   {
     id: "learning",
     icon: "📐",
-    gen: "Gen1–3",
-    title: "Learning loop",
-    blurb: "It gets sharper from YOUR graded decisions — not generic tips.",
-    points: [
-      "Decision log · accuracy charts · Brier score · calibration 2.0",
-      "Personal truth model · never-again list · miss/hit taxonomy",
-      "Hybrid M/AI/P weight auto-tune · ECR vs AI trust personal",
-      "Edge journal · monthly learning digest · mistake replay",
-      "Position bias detector · overconfidence shrinker",
-      "Hall of fame decisions · personal ADP vs market",
+    title: "Learning & accuracy",
+    blurb: "Draft tools don’t grade your bad flex.",
+    items: [
+      "Decision log · accuracy charts",
+      "Confidence calibration",
+      "Personal truth model",
+      "Never-again list · edge journal",
+      "Hybrid weight auto-tune",
+      "Mistake replay · monthly digest",
     ],
   },
   {
-    id: "formats",
+    id: "playoffs",
     icon: "🏆",
-    gen: "Gen1–3",
-    title: "Formats & platform",
-    blurb: "Best ball, DFS, dynasty, IDP, 2QB — plus Apple-native surface.",
-    points: [
-      "Best ball optimize · DFS multi-entry correlation stacks",
-      "Dynasty startup + rookie · IDP lite · 2QB deep curve",
-      "Custom scoring solver per league",
-      "Home widgets S/M/L · Watch complications · iPad split board",
-      "Biometric vault · quiet hours · Focus filter game day",
-      "Season package export · coverage map of all 300",
+    title: "Playoffs & formats",
+    blurb: "Championship mode. Best ball. Dynasty. DFS.",
+    items: [
+      "Championship week pack",
+      "Playoff path planner",
+      "Best ball optimize · DFS stacks",
+      "Dynasty startup + rookie",
+      "IDP lite · 2QB curves",
+      "Custom scoring per league",
+    ],
+  },
+  {
+    id: "platform",
+    icon: "📱",
+    title: "Platform & privacy",
+    blurb: "Local-first. Keychain. Apple-native surface.",
+    items: [
+      "Local SwiftData · offline draft",
+      "Keychain API keys · biometric lock",
+      "Home widgets · Watch · Live Activity",
+      "Quiet hours · Focus game day",
+      "Share cards · season export",
+      "No selling your league graph",
     ],
   },
 ];
@@ -154,51 +188,48 @@ export default function ProductMap() {
         <div className="max-w-2xl mb-12 sm:mb-16">
           <p className="section-label mb-3">
             <span className="h-1 w-1 rounded-full bg-[var(--accent)]" aria-hidden />
-            What it does · 300 enhancements
+            What you get
           </p>
           <h2 id="product-heading" className="section-title">
-            Full-season OS. Not another draft-week tab.
+            Everything they skip after “good luck.”
           </h2>
           <p className="section-sub mt-4">
-            Gen1 win stack. Gen2 import + portfolio. Gen3 market intel, Sunday GM,
-            Draft 3.0, season domination, and a learning loop that actually
-            recalibrates. Serious multi-league managers stop juggling five apps.
+            Draft Wizard and FantasyPros are excellent at rankings and draft night.
+            SnapFantasy is the OS for every category that decides your season —
+            broken out below. No fluff generations. Just the tools that win weeks.
           </p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {pillars.map((p) => (
-            <article key={p.id} className="card p-5 sm:p-6 flex flex-col">
+          {categories.map((c) => (
+            <article key={c.id} className="card p-5 sm:p-6 flex flex-col">
               <div className="flex items-start gap-3 mb-3">
                 <span
                   className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-dim)] text-lg"
                   aria-hidden
                 >
-                  {p.icon}
+                  {c.icon}
                 </span>
                 <div>
-                  <div className="text-[10px] font-semibold uppercase tracking-wider text-[var(--accent)] mb-0.5">
-                    {p.gen}
-                  </div>
                   <h3 className="text-base font-semibold text-[var(--text)] tracking-tight">
-                    {p.title}
+                    {c.title}
                   </h3>
                   <p className="text-sm text-[var(--text-muted)] mt-1 leading-snug">
-                    {p.blurb}
+                    {c.blurb}
                   </p>
                 </div>
               </div>
               <ul className="mt-auto space-y-2 pt-3 border-t border-[var(--border)]">
-                {p.points.map((point) => (
+                {c.items.map((item) => (
                   <li
-                    key={point}
+                    key={item}
                     className="flex gap-2 text-sm text-[var(--text-muted)] leading-snug"
                   >
                     <span
                       className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[var(--accent)]"
                       aria-hidden
                     />
-                    {point}
+                    {item}
                   </li>
                 ))}
               </ul>
@@ -217,23 +248,23 @@ export default function ProductMap() {
             <MockMarketIntel />
             <MockExposure />
             <MockScript />
-            <div className="card p-5 flex flex-col justify-center">
+            <div className="card p-5 flex flex-col justify-center border-[var(--accent)]/25 bg-[var(--accent-dim)]/40">
               <p className="text-xs font-semibold uppercase tracking-wider text-[var(--accent)] mb-2">
-                Coverage map
+                The honest take
               </p>
-              <p className="text-2xl font-bold text-[var(--text)] tracking-tight">
-                50 + 50 + 200 ={" "}
-                <span className="text-[var(--accent-bright)]">300</span>
+              <p className="text-lg font-bold text-[var(--text)] tracking-tight leading-snug">
+                They’re draft week.{" "}
+                <span className="text-[var(--accent-bright)]">We’re the season.</span>
               </p>
               <p className="mt-2 text-sm text-[var(--text-muted)] leading-relaxed">
-                Gen1 win stack · Gen2 portfolio & import · Gen3 market, agents,
-                Draft 3.0, season domination, learning 2.0, formats, UX.
+                Rankings apps don’t run your lock chain, FAAB war room, or portfolio
+                heat. Host apps don’t learn when your flex was wrong. We do.
               </p>
               <a
-                href="#features"
+                href="#why-better"
                 className="mt-4 text-sm font-semibold text-[var(--accent-bright)] hover:underline"
               >
-                Browse the full capability map →
+                See the head-to-head →
               </a>
             </div>
           </div>

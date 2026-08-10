@@ -16,12 +16,12 @@ const faqs = [
     a: "Host apps and draft tools don’t see your whole book. Portfolio heat, anti-correlate, money-league weights, lock chains, cross-league FAAB, and Sunday one-tap exist because 3–10 leagues is the real job.",
   },
   {
-    q: "What’s new in Gen3 (200 features)?",
-    a: "Market intel board, Sunday GM command, Draft 3.0, season domination modes, portfolio heat 2.0, host adapters (ESPN/CBS/NFL.com/Fleaflicker paste paths), Learning 2.0 with edge journal and hybrid weight auto-tune, plus formats (best ball, DFS, dynasty, IDP) and Apple-native UX.",
+    q: "What do you have that Draft Wizard / FantasyPros don’t?",
+    a: "Sunday command across every league, portfolio heat, FAAB war rooms, trade desk + politics, learning from YOUR graded misses, multi-host import, and AI agents with your house rules — not just rankings and a draft room. They’re great at draft week. We’re built for the season.",
   },
   {
     q: "Yahoo / Gmail / other hosts?",
-    a: "Yahoo via official OAuth. Gmail is opt-in fantasy mail scan. Paste invite/URL/HTML always works. Gen3 adds ESPN deep adapter, CBS/NFL.com/Fleaflicker paste, CSV, screenshot OCR path, and bulk re-sync.",
+    a: "Yahoo via official OAuth. Gmail is opt-in fantasy mail scan. Paste invite/URL/HTML always works. Also: ESPN deep adapter, CBS/NFL.com/Fleaflicker paste, CSV, screenshot OCR path, and bulk re-sync.",
   },
   {
     q: "Multi-league drafts at once?",
